@@ -1,7 +1,6 @@
 body {
   text-align: center;
   margin: 300px;
-  position: absolute;
   background-image: url("imani-clovis-214299-unsplash.jpg");
   background-color: #cccccc;
   height: 300px;
@@ -51,10 +50,11 @@ body {
 /* CSS animate list: https://codepen.io/HJ-b/pen/yYNXmR */
 ul {
   width: 300px;
-  position: absolute;
-  left: 50%;
+  margin: auto;
   margin-top: 25px;
-  margin-left: -150px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 li {
   position: relative;
