@@ -3,7 +3,7 @@ $total-items: 5;
 body {
     text-align: center;
     margin: 300px;
-    background-image: url("paxson-woelber-534784-unsplash.jpg");
+    background-image: url("imani-clovis-214299-unsplash.jpg");
     background-color: #cccccc;
     height: 300px;
     background-position: center;
@@ -16,51 +16,34 @@ body {
 
 
 .btn-group button {
-    background-color: #696969;
-    background-image:
-    radial-gradient(
-        circle,
-        grey, #5E5E7E
-      );
-    border: none;
-    color: white;
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-
+    background-color: rgb(195, 199, 195); /* Green background */
+    border: 1px solid rgb(255, 255, 255); /* Green border */
+    color: white; /* White text */
+    padding: 10px 15px; /* Some padding */
+    
     float: left; /* Float the buttons side by side */
     size: 10px;
-    font-size: 40px;
+    font-size: 30px;
     margin: 4px 2px;
     cursor: pointer; /* Pointer/hand icon */
     transition-duration: 0.4s;
-    border-radius: 5px;
+    border-radius: 14px;
   }
-
+  
   /* Clear floats (clearfix hack) */
   .btn-group:after {
     content: "";
     clear: both;
     display: table;
   }
-
+  
   .btn-group button:not(:last-child) {
     border-right: none; /* Prevent double borders */
   }
-
+  
   /* Add a background color on hover */
   .btn-group button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  }
-
-  .btn-group button:focus {
-    outline: 0;
-    background-image:
-    radial-gradient(
-        circle,
-        white, #ADC0D6
-      );
   }
 
   .btn-group {
@@ -83,7 +66,7 @@ body {
     justify-content: center;
     padding-inline-start: 0px;
   }
-
+  
   li {
     position: relative;
     display: block;
@@ -101,14 +84,14 @@ body {
     color: rgb(27, 26, 26);
     text-decoration: none;
   }
-
+  
   // Set delay per List Item
   @for $i from 1 through $total-items {
     li:nth-child(#{$i}) {
       animation-delay: .25s * $i;
     }
   }
-
+  
   // Keyframe animation
   @-webkit-keyframes fadeIn {
     0% {
