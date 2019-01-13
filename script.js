@@ -6,19 +6,19 @@ function recommend(mood) {
     }
 
     const app = document.getElementById('root');
-  
+
     const ul = document.createElement('ul');
     ul.setAttribute('id', 'track-list');
-  
+
     app.appendChild(ul);
-  
+
     var trackList = [];
-  
+
     var header = {
       'Accept': "application/json",
       "Content-Type": "application/json",
-      "Authorization": "Bearer BQCTM-5TusA_rJ2-aM3ebs99DV6Dx0aeQalTA1OnWrNBDHK2Jq4d9BMz9WH1xxPvR36XULgp8hwRBNMRtwQ"
-  
+      "Authorization": "Bearer BQDhatNgIhSoZXNY88vCpZVG-1oigwetL8z2pwo5Xfo1g6VXFcZWZ4GPZqpKzIws20uJtdjXRU5OtI4-ptg"
+
     };
 
     var lnk = '';
@@ -40,7 +40,7 @@ function recommend(mood) {
     if (mood == 'fitness') {
         lnk = 'https://api.spotify.com/v1/recommendations?market=US&seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_tracks=0c6xIDDpzE81m2q797ordA&min_danceability=0.6&max_danceability=1&min_energy=0.4&min_popularity=50'
     }
-  
+
     const getData = () => {
       try {
         return axios.get(lnk,{'headers':header})
@@ -52,13 +52,13 @@ function recommend(mood) {
         }
       }
     }
-  
+
     const getTracks = async () => {
       const breeds = getData()
         .then(response => {
           if (response.data.tracks) {
             for (counter = 0; counter < 5; counter++) {
-  
+
               const li = document.createElement('li');
               const anc = document.createElement('a');
               anc.setAttribute("href", response.data.tracks[counter].album.external_urls.spotify);
@@ -67,7 +67,7 @@ function recommend(mood) {
 
               li.appendChild(anc);
               ul.appendChild(li);
-  
+
               trackList.push([response.data.tracks[counter].name, response.data.tracks[counter].album.artists[0].name], response.data.tracks[counter].album.external_urls.spotify)
               //console.log(response.data.tracks[counter].name + " by " + response.data.tracks[counter].album.artists[0].name)
             }
@@ -76,12 +76,12 @@ function recommend(mood) {
             console.log(element)
           });
           console.log(response.data)
-        
+
         })
         .catch(error => {
           console.log(error)
         })
     }
-  
+
     getTracks()
   }
