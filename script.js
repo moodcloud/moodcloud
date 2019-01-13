@@ -17,7 +17,7 @@ function recommend() {
     var header = {
       'Accept': "application/json",
       "Content-Type": "application/json",
-      "Authorization": "Bearer BQA3XrZqi-bYhqYOs9G60RWHqavlF5kcmGHb-YNvRUjZoCg7PZTjOwqZIq5qYDPJ65Y48jfaQmdAOvGNKu8"
+      "Authorization": "Bearer BQDbyDHsPlATrKVjtly3u8qTSsPMb5CCayeYoc9Th0Lxx_DJAGU2NtLRteJaMk9d4XhILFYZRmtZNJSoZBQ"
   
     };
   
@@ -40,18 +40,22 @@ function recommend() {
             for (counter = 0; counter < 5; counter++) {
   
               const li = document.createElement('li');
-              li.textContent = response.data.tracks[counter].name + " by " + response.data.tracks[counter].album.artists[0].name;
-  
+              const anc = document.createElement('a');
+              anc.setAttribute("href", response.data.tracks[counter].album.external_urls.spotify);
+              anc.setAttribute("target", "_blank");
+              anc.textContent = response.data.tracks[counter].name + " by " + response.data.tracks[counter].album.artists[0].name;
+
+              li.appendChild(anc);
               ul.appendChild(li);
   
-  
-              trackList.push([response.data.tracks[counter].name, response.data.tracks[counter].album.artists[0].name])
+              trackList.push([response.data.tracks[counter].name, response.data.tracks[counter].album.artists[0].name], response.data.tracks[counter].album.external_urls.spotify)
               //console.log(response.data.tracks[counter].name + " by " + response.data.tracks[counter].album.artists[0].name)
             }
           }
           trackList.forEach(element => {
             console.log(element)
           });
+          console.log(response.data)
         
         })
         .catch(error => {

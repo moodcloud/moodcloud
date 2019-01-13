@@ -57,7 +57,8 @@ ul {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  padding-inline-start: 0px; }
 
 li {
   position: relative;
@@ -67,8 +68,13 @@ li {
   padding: 10px;
   text-align: center;
   text-transform: uppercase;
+  color: #1b1a1a;
   animation: fadeIn 0.5s linear;
   animation-fill-mode: both; }
+
+a {
+  color: #1b1a1a;
+  text-decoration: none; }
 
 li:nth-child(1) {
   animation-delay: 0.25s; }
