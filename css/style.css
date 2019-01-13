@@ -1,15 +1,24 @@
 body {
   text-align: center;
-  margin: 300px;
+  margin: 200px;
   background-image: url("paxson-woelber-534784-unsplash.jpg");
   background-color: #cccccc;
   height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
+  font-weight: 700;
   font-family: 'Lato', sans-serif;
   color: #373a37; }
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 225px; }
 
 .btn-group button {
   background-color: #696969;
@@ -23,12 +32,12 @@ body {
   float: left;
   /* Float the buttons side by side */
   size: 10px;
-  font-size: 40px;
+  font-size: 60px;
   margin: 4px 2px;
   cursor: pointer;
   /* Pointer/hand icon */
   transition-duration: 0.4s;
-  border-radius: 5px; }
+  border-radius: 10px; }
 
 /* Clear floats (clearfix hack) */
 .btn-group:after {
@@ -56,9 +65,9 @@ body {
 
 /* CSS animate list: https://codepen.io/HJ-b/pen/yYNXmR */
 ul {
-  width: 300px;
+  width: 520px;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
@@ -66,9 +75,10 @@ ul {
   padding-inline-start: 0px; }
 
 li {
+  background-color: white;
   position: relative;
   display: block;
-  border: 1px solid #464344;
+  border: none;
   margin-top: 10px;
   padding: 10px;
   text-align: center;
@@ -82,19 +92,19 @@ a {
   text-decoration: none; }
 
 li:nth-child(1) {
-  animation-delay: 0.25s; }
+  animation-delay: 0.05s; }
 
 li:nth-child(2) {
-  animation-delay: 0.5s; }
+  animation-delay: 0.1s; }
 
 li:nth-child(3) {
-  animation-delay: 0.75s; }
+  animation-delay: 0.15s; }
 
 li:nth-child(4) {
-  animation-delay: 1s; }
+  animation-delay: 0.2s; }
 
 li:nth-child(5) {
-  animation-delay: 1.25s; }
+  animation-delay: 0.25s; }
 
 @-webkit-keyframes fadeIn {
   0% {
