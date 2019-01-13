@@ -1,5 +1,7 @@
 function recommend(mood) {
 
+    refreshToken();
+
     console.log(document.getElementById('track-list'));
     if (!(document.getElementById('track-list') == null)) {
       document.getElementById("track-list").outerHTML = "";
@@ -17,8 +19,7 @@ function recommend(mood) {
     var header = {
       'Accept': "application/json",
       "Content-Type": "application/json",
-      "Authorization": "Bearer BQCTM-5TusA_rJ2-aM3ebs99DV6Dx0aeQalTA1OnWrNBDHK2Jq4d9BMz9WH1xxPvR36XULgp8hwRBNMRtwQ"
-  
+      "Authorization": "Bearer " + "BQCTM-5TusA_rJ2-aM3ebs99DV6Dx0aeQalTA1OnWrNBDHK2Jq4d9BMz9WH1xxPvR36XULgp8hwRBNMRtwQ"
     };
 
     var lnk = '';
@@ -46,7 +47,7 @@ function recommend(mood) {
         return axios.get(lnk,{'headers':header})
       } catch (error) {
         if (response.status == 401) {
-          console.log("Get new token.")
+          refreshToken();
         } else {
           console.log(error)
         }
