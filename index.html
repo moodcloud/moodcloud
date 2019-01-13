@@ -4,24 +4,25 @@
 <head>
   <meta charset="utf-8">
   <title>MoodCloud</title>
-  <meta name="author" content="">
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-
-  <h1>How are you feeling?</h1>
-  <div class="btn-group">
-    <button>&#x1F603</button>
-    <button>&#x1F641</button>
-    <button>&#x1F621</button>
+  <div id="root">
+      <h1>How are you feeling?</h1>
+      <div class="btn-group">
+        <button type="button" onclick="recommend()">&#x1F603</button>
+        <button type="button" onclick="recommend()">&#x1F641</button>
+        <button type="button" onclick="recommend()">&#x1F621</button>
+      </div>
   </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
