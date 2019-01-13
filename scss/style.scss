@@ -19,11 +19,14 @@ body {
     border: 1px solid rgb(255, 255, 255); /* Green border */
     color: white; /* White text */
     padding: 10px 15px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
+    
     float: left; /* Float the buttons side by side */
     size: 10px;
     font-size: 30px;
-    
+    margin: 4px 2px;
+    cursor: pointer; /* Pointer/hand icon */
+    transition-duration: 0.4s;
+    border-radius: 14px;
   }
   
   /* Clear floats (clearfix hack) */
@@ -39,7 +42,7 @@ body {
   
   /* Add a background color on hover */
   .btn-group button:hover {
-    background-color: #555755;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
   .btn-group {
